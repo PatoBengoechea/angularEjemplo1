@@ -1,0 +1,24 @@
+<div class="central">
+  <h1 class="title"> Bienvenido al organizador de tareas</h1>
+
+  <div background="/src/escritorio.jpg">
+    <input type="text" [(ngModel)]="descripcion" class="entrada" autofocus>
+    <input type="button"  value="Agregar" (click)="add(descripcion)">
+    <p>{{item}}</p>
+    <div class="myTable">
+      <table>
+        <tr>
+          <th *ngIf="list.length>0">ID </th>
+          <th *ngIf="list.length>0">Descrpcion </th>
+          <th *ngIf="list.length>0">Realizado</th>
+        </tr>
+        <tr *ngFor="let item of list">
+          <td [ngClass]="(item.realizado===true)?'realizado':'sinrealizar'">{{item.id}}</td>
+          <td [ngClass]="(item.realizado===true)?'realizado':'sinrealizar'">{{item.descripcion}}</td>
+          <td [ngClass]="(item.realizado===true)?'realizado':'sinrealizar'">{{item.realizado}}</td>
+          <td *ngIf="item.realizado===false"><input type="button" value="Realizado" (click)="marcarRealizado(item.id)"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

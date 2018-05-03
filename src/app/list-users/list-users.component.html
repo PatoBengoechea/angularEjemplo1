@@ -1,0 +1,20 @@
+<h2>Tabla de Usuarios</h2>
+<div>
+    <table *ngIf="list.length>0">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th> Mail</th>
+        <th>Password</th>
+      </tr>
+      <tr *ngFor="let per of list" >
+        <td>{{per.id}}</td>
+        <td> {{per.nombre}} </td>
+        <td> {{per.mail}} </td>
+        <td> {{per.password}}</td>
+        <td><input type="button" value="Eliminar"></td>
+        <td><input type="button" value="Modificar Contraseña"> </td>
+      </tr>
+    </table>
+
+</div>

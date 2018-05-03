@@ -1,0 +1,59 @@
+.title{
+    font-family: fantasy;
+    font-size: 40px;
+}
+
+.central{
+    text-align: center;
+    background-image: url("/src/escritorio.jpg");
+}
+.entrada{
+    border: 2px double;
+    border-radius: 5;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 300px;
+}
+
+input[type="button"]{
+    height: 30px;
+    width: 100px;
+    background-color: lightskyblue;
+
+}
+
+input[type="button"]:hover{
+    height: 40px;
+    width: 105px;
+}
+.entrada:hover{
+    height: 30px;
+    width: 400px;
+}
+.myTable{
+    align-content: center;
+    display: inline-block;
+    text-align: center;
+}
+table{
+    border: 2px solid;
+    width: 1000px;
+    padding: 5px;
+    margin: auto;
+}
+
+th, td{
+    border: 2px, dotted, black;
+    padding: 15px;
+}
+th{
+    background-color:lightgrey;
+}
+
+.realizado{
+    background-color: greenyellow;
+}
+
+.sinrealizar{
+    background-color: red;
+}

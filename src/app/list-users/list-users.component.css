@@ -1,0 +1,12 @@
+table{
+    align-content: center;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid;
+    width: 500px;
+    padding: 5px;
+    margin: auto;
+}
+h2{
+    text-align: center;
+}
