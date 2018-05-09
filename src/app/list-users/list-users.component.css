@@ -15,3 +15,11 @@ h2{
     align-content: center;
     text-align: center;
 }
+
+.cambiada{
+    background-color: green;
+}
+
+.sincambiar{
+    background-color: red;
+}

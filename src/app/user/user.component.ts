@@ -14,7 +14,6 @@ export class UserComponent implements OnInit {
   nombre;
   password;
   mail;
-  id = 0;
   constructor() { }
 
   ngOnInit() {
@@ -27,8 +26,8 @@ export class UserComponent implements OnInit {
     persona.nombre = this.nombre;
     persona.password = this.password;
     persona.mail = this.mail;
-    persona.id = this.id;
-    this.id++;
+    //persona.id = this.id;
+    //this.id++;
     this.newPersona.emit(persona);
   }
 
