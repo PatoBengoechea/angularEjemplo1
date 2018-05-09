@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+//import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-list-users',
@@ -8,10 +9,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListUsersComponent implements OnInit {
   
   @Input() list=[];
+  @Output() eliminarPersona = new EventEmitter<any>();
+  @Output() modificarPassword = new EventEmitter<any>();
+  id;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  modificarPersona(event, id){
+    this.eliminarPersona.emit(id);
+  }
+  modificarPass(event, id){
+    this.modificarPassword.emit(id);
+  }
 }

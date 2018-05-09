@@ -10,3 +10,8 @@ table{
 h2{
     text-align: center;
 }
+
+.table{
+    align-content: center;
+    text-align: center;
+}

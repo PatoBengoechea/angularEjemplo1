@@ -1,5 +1,5 @@
-<h2>Tabla de Usuarios</h2>
-<div>
+<h2 *ngIf="list.length>0">Tabla de Usuarios</h2>
+<div class ="table">
     <table *ngIf="list.length>0">
       <tr>
         <th>ID</th>
@@ -8,12 +8,12 @@
         <th>Password</th>
       </tr>
       <tr *ngFor="let per of list" >
-        <td>{{per.id}}</td>
+        <td> {{per.id}}</td>
         <td> {{per.nombre}} </td>
         <td> {{per.mail}} </td>
         <td> {{per.password}}</td>
-        <td><input type="button" value="Eliminar"></td>
-        <td><input type="button" value="Modificar Contraseña"> </td>
+        <td><input type="button" value="Eliminar" (click)="modificarPersona($event, per.id)"></td>
+        <td><input type="button" value="Modificar Contraseña" (click)="modificarPass($event, per.id)"> </td>
       </tr>
     </table>
 

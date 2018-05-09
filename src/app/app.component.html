@@ -1,8 +1,5 @@
-<div>
-  <app-user (newPersona)="add($event)">
-    
-  </app-user>
-  <app-list-users [list]="list">
 
-  </app-list-users>
-</div>
+  <app-user (newPersona)="add($event)"></app-user>
+  <app-list-users [list]="list" (eliminarPersona)="eliminarPersona($event)" (modificarPassword)="modificarPassword($event)" ></app-list-users>
+  <app-user *ngIf="perAModificar.nombre !== undefined" [persona]="perAModificar" (newPersona)="add($event)"></app-user>
+  
